@@ -20,10 +20,10 @@ The system is containerized using Docker and orchestrated by Apache Airflow. It 
 </p>
 
 ### Pipeline Stages
-1.  **Ingestion (Bronze):** Automated retrieval of datasets (CSVs, APIs) into HDFS. Handles incremental loading via hash comparison.
-2.  **Refinement (Silver):** PySpark jobs standardize schemas, handle encoding, and format data into Parquet.
-3.  **Quality Assurance (Trusted):** Rigorous data profiling and constraint checking (e.g., "Birth year cannot be in the future") to ensure integrity.
-4.  **Semantic Modeling (Gold):** Transformation of relational data into RDF triples (Turtle format) and loading into Ontotext GraphDB.
+1.  **Ingestion:** Automated retrieval of datasets (CSVs, APIs) into HDFS. Handles incremental loading via hash comparison.
+2.  **Refinement:** PySpark jobs standardize schemas, handle encoding, and format data into Parquet.
+3.  **Quality Assurance:** Rigorous data profiling and constraint checking (e.g., "Birth year cannot be in the future") to ensure integrity.
+4.  **Semantic Modeling:** Transformation of relational data into RDF triples (Turtle format) and loading into Ontotext GraphDB.
 5.  **Analytics:** Extraction of insights using SPARQL queries and Python for visualization.
 
 ## 🛠️ Tech Stack
